@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "variables": {
+        
+        "apilocation": "/graphql/",
+        "applocation": "/react-app/"
+    },
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "Central US"
+        },
+        "repositoryToken": {
+            "type": "securestring"
+        },
+        "repositoryUrl": {
+            "type": "string"
+        },
+        "branch": {
+            "type": "string",
+            "defaultValue": "main"
+        }, 
+        
+        "sku": {
+            "type": "string",
+            "defaultValue": "Free"
+        },
+        "skucode": {
+            "type": "string",
+            "defaultValue": "Free"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2021-01-15",
+            "name": "[parameters('name')]",
+            "type": "Microsoft.Web/staticSites",
+            "location": "[parameters('location')]",
+            "sku": {
+                "tier": "[parameters('sku')]",
+                "name": "[parameters('skuCode')]"
+            },
+            "properties": {
+                "repositoryUrl": "[parameters('repositoryUrl')]",
+                "branch": "[parameters('branch')]",
+                "repositoryToken": "[parameters('repositoryToken')]",
+                "stagingEnvironmentPolicy": "Enabled",
+                "allowConfigFileUpdates": true,
+                "buildProperties": {
+                    "appLocation": "[variables('applocation')]",
+                    "apiLocation": "[variables('apilocation')]"
+    
+                }
+            }   
+        }
+    ]
+}
