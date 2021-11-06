@@ -14,8 +14,8 @@ const dev = {
     apiurl:'https://eff5lservices.azurewebsites.net/api/',
     imgbase:'https://eff5.z20.web.core.windows.net/images/',
     defimgurl: 'https://eff5.z20.web.core.windows.net/images/default.png',
-    graphurl:'https://eff5fl.azurewebsites.net/api/graphql',
-    base:"http://localhost:3000/",
+    graphurl:'/api/graphql',
+    base:"/",
     //graphurl:'http://localhost:7070/api/graphql',
     
 }; 
