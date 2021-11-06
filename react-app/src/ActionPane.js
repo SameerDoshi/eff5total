@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import VoteButton from './VoteButton'
-import { config } from './Constants'
-import CommentCard from './CommentCard';
-import {Card,Image,Button} from 'react-bootstrap'
+import {Card,Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 class ActionPane extends Component {
     voteHandler=(voterType, newStory)=>{

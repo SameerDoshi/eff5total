@@ -139,7 +139,7 @@ class TagList extends Component {
         });
     }
     getNavs =()=>{
-        if(this.state.tags.length ==0){
+        if(this.state.tags.length ===0){
             return "";
         }
         
@@ -171,7 +171,7 @@ class TagList extends Component {
         return upfront.map((tag, index) => (
             <Nav.Item key={index}>
                 <Nav.Link as={Link} to={"/t/" + tag.name} eventKey={index} title="Item">
-                    {tag.name.length>10 && tag.name!=current ? tag.name.substring(0,10): tag.name}
+                    {tag.name.length>10 && tag.name !== current ? tag.name.substring(0,10): tag.name}
                 </Nav.Link>
             </Nav.Item>
         ));

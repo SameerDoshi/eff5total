@@ -1,6 +1,5 @@
 //import React from 'react'
 import React, { Component } from 'react';
-import { config } from './Constants';
 import StaticContent from './StaticContent';
 import StoryCard from './StoryCard';
 import Button from 'react-bootstrap/Button'
@@ -21,18 +20,7 @@ const SQ=gql`
         stories:getStoriesByTag(tagname:$tname){id comment_count points Headline url text posted imgpreview}}
 `;
 
-const VQ=gql`
-mutation(
-    $storyId:String
-    $tagName:String
-    $type:String){
-  vote(
-    storyId:$storyId
-    tagName:$tagName
-    type:$type
-  ){points}
-}
-`;
+
 
 class StoryList extends Component {
     constructor(props) {

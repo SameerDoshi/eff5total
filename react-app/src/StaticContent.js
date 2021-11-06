@@ -1,18 +1,8 @@
-//import React from 'react'
 import React, { Component } from 'react';
-import { config } from './Constants';
-import StoryCard from './StoryCard';
-import Button from 'react-bootstrap/Button'
-import EffApi from './EffApi';
-import { gql } from '@apollo/client';
 
 
 class StaticContent extends Component {
-    constructor(props) {
-        super(props);
-      
-    }
-    
+   
 
 
     render() {

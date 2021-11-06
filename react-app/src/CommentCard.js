@@ -1,24 +1,14 @@
-//import React from 'react'
+
 import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card'
-//import Button from 'react-bootstrap/Button'
+
+
 import ReplyForm from './ReplyForm'
 import { Accordion, Icon} from 'semantic-ui-react'
-import { MessageBox, Button  } from 'react-chat-elements';
-
-const ReactMarkdown = require('react-markdown')
+import { MessageBox  } from 'react-chat-elements';
 
 
-const footerStyle = {
-    marginLeft: '5px',
-    marginRight: '5px',
-};
-const standardSpace={
-    width: '18rem',
-    marginTop:'1rem',
-    marginBottom:'1rem'
-    
-};
+
+
 
 class CommentCard extends Component {
     constructor(props) {
@@ -67,7 +57,7 @@ class CommentCard extends Component {
         exclusive={false}>
           <Accordion.Title>
           <Icon name='dropdown' onClick={this.handleClick} />
-         {this.props.comment.comments.length}&nbsp; Repl{this.props.comment.comments.length==1?"y":"ies"}:
+         {this.props.comment.comments.length}&nbsp; Repl{this.props.comment.comments.length === 1?"y":"ies"}:
           </Accordion.Title>
           <Accordion.Content active={this.state.expanded}>
             {this.getChildComments()}

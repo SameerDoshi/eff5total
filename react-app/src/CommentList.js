@@ -2,14 +2,12 @@
 import React, { Component } from 'react';
 import ReplyForm from './ReplyForm';
 import ActionPane from './ActionPane.js';
-import { config } from './Constants'
 import CommentCard from './CommentCard';
-import {Card,Image,Button} from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import {Image} from 'react-bootstrap'
 import ReactPlayer from "react-player"
 import EffApi from './EffApi';
 import { gql } from '@apollo/client';
-import { Header, Comment } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 import StaticContent from './StaticContent';
 import Countdown from 'react-countdown';
 
@@ -94,9 +92,7 @@ class CommentList extends Component {
     
   }
   voteHandler = (voterType, newStory) => {
-    let modifer = 1;
-    if (voterType === "stupid") { modifer = -5; }
-    if (voterType === "down") { modifer = -1; }
+    
     this.setState({ story:newStory, voted: voterType });
     
 }

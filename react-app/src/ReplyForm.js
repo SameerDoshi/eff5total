@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import { config } from './Constants'
 
 class ReplyForm extends Component {
     constructor(props) {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-chat-elements/dist/main.css';
-import Container from 'react-bootstrap/Container';
 import StoryList from './StoryList'
 import CommentList from './CommentList'
 import TagList from './TagList'
@@ -14,14 +13,7 @@ import {
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    
-  }
-  
-  
-
-
+ 
   render() {
     
     return (

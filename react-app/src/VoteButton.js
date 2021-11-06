@@ -1,7 +1,6 @@
 //import React from 'react'
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
-import { config } from './Constants';
 import EffApi from './EffApi';
 import { gql } from '@apollo/client';
 

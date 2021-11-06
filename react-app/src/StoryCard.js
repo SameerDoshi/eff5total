@@ -1,6 +1,5 @@
-//import React from 'react'
 import React, { Component } from 'react';
-import {Card,Image,Button} from 'react-bootstrap'
+import {Card,Image} from 'react-bootstrap'
 import ActionPane from './ActionPane.js';
 import ReactPlayer from "react-player";
 import { Link } from 'react-router-dom';
@@ -57,9 +56,6 @@ class StoryCard extends Component {
         ev.target.src = config.defimgurl;
     }
     voteHandler = (voterType, newStory) => {
-        let modifer = 1;
-        if (voterType === "stupid") { modifer = -5; }
-        if (voterType === "down") { modifer = -1; }
         this.setState({ voted: voterType });
         this.props.callback(newStory);
     }
