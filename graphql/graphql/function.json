@@ -6,14 +6,15 @@
       "direction": "in",
       "name": "req",
       "methods": [
+        "options",
         "get",
-        "post",
-        "options"
+        "post"
       ]
     },
     {
       "type": "http",
       "direction": "out",
-      "name": "$return"    }
+      "name": "$return"
+    }
   ]
 }
